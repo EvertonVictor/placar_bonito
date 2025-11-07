@@ -4,14 +4,27 @@ body {
     padding: 20px;
 }
 
-/* A tabela que será gerada */
-#stage table {
-    border-collapse: collapse;
-    width: 100%;
-    max-width: 600px;
+/* * 1. NOVO ESTILO PARA O #STAGE
+ * É este elemento que será o nosso "cartão" no PNG final.
+*/
+#stage {
+    width: fit-content; /* <-- ESTA É A MÁGICA: Faz o DIV ter a largura da tabela */
+    padding: 20px;      /* Um respiro bonito DENTRO do PNG */
     background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px; /* Opcional, mas deixa bonito */
+    margin: 20px auto;  /* Apenas para centralizar na tela de pré-visualização */
+}
+
+
+/* * 2. ESTILO LIMPO PARA A TABELA
+ * A tabela agora só cuida dos dados, o "cartão" é o stage.
+*/
+#stage table {
+    border-collapse: collapse;
+    width: 100%; /* 100% da largura do #stage */
+    /* Removemos background, box-shadow e border daqui */
 }
 
 #stage th, #stage td {
@@ -30,7 +43,7 @@ body {
     background-color: #f9f9f9;
 }
 
-/* Dando destaque para as colunas do placar */
+/* Destaques (isso continua igual) */
 #stage td:nth-child(3), /* Pts */
 #stage td:nth-child(4), /* GP */
 #stage td:nth-child(5), /* GS */
