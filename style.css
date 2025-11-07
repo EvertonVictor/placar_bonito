@@ -4,33 +4,39 @@ body {
     padding: 20px;
 }
 
-/* * 1. NOVO ESTILO PARA O #STAGE
- * É este elemento que será o nosso "cartão" no PNG final.
+/* * 1. É ESTE DIV QUE VAMOS PRINTAR
+ * Ele será o "cartão" da imagem final.
 */
 #stage {
-    width: fit-content; /* <-- ESTA É A MÁGICA: Faz o DIV ter a largura da tabela */
-    padding: 20px;      /* Um respiro bonito DENTRO do PNG */
+    /* --- A MÁGICA ESTÁ AQUI --- */
+    width: fit-content; /* Faz o DIV encolher para caber EXATAMENTE a tabela */
+    
+    /* Estilos para o PNG ficar bonito */
+    padding: 20px;
     background-color: #ffffff;
     border: 1px solid #ccc;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    border-radius: 8px; /* Opcional, mas deixa bonito */
-    margin: 20px auto;  /* Apenas para centralizar na tela de pré-visualização */
+    border-radius: 8px;
+
+    /* Apenas para a pré-visualização na tela */
+    margin: 20px 0; 
 }
 
-
-/* * 2. ESTILO LIMPO PARA A TABELA
- * A tabela agora só cuida dos dados, o "cartão" é o stage.
+/* * 2. A TABELA DENTRO DO STAGE
+ * Ela não precisa mais de sombra ou fundo, só dos dados.
 */
 #stage table {
     border-collapse: collapse;
-    width: 100%; /* 100% da largura do #stage */
-    /* Removemos background, box-shadow e border daqui */
+    /* Removemos o width: 100% e o max-width daqui */
+    /* A tabela agora terá seu tamanho natural */
 }
 
 #stage th, #stage td {
     border: 1px solid #ddd;
     padding: 10px 12px;
     text-align: left;
+    /* Adicionamos isso para o texto não quebrar à toa */
+    white-space: nowrap; 
 }
 
 #stage th {
