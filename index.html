@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Placar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <h1>Gerador de Placares</h1>
+    <p>Cole o texto do placar abaixo:</p>
+
+    <textarea id="inputText" rows="10" cols="60">
+| Posição | Jogador | Pts | GP | GS | SG |
+|---|---|---|--|--|--|
+| 1º | paulin (Athletico-PR) | 3 | 2 | 0 | +2 |
+| 2º | !Zapominá (São Paulo) | 3 | 1 | 0 | +1 |
+| 3º | Allen (Grêmio) | 0 | 0 | 1 | -1 |
+| 4º | everto / Brastemp Jr (Fortaleza) | 0 | 0 | 2 | -2 |
+    </textarea>
+
+    <br>
+    <button id="gerarBtn">Gerar Imagem PNG</button>
+
+    <hr>
+    <h3>Pré-visualização:</h3>
+    
+    <div id="stage">
+        </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

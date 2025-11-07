@@ -1,0 +1,40 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+/* A tabela que será gerada */
+#stage table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 600px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#stage th, #stage td {
+    border: 1px solid #ddd;
+    padding: 10px 12px;
+    text-align: left;
+}
+
+#stage th {
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+#stage tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Dando destaque para as colunas do placar */
+#stage td:nth-child(3), /* Pts */
+#stage td:nth-child(4), /* GP */
+#stage td:nth-child(5), /* GS */
+#stage td:nth-child(6) { /* SG */
+    text-align: center;
+    font-weight: bold;
+}
